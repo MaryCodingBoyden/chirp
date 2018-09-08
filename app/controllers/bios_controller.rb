@@ -4,7 +4,10 @@ class BiosController < ApplicationController
   # GET /bios
   # GET /bios.json
   def index
-    @bios = Bio.all
+    @user = User.first
+    @bios = @user.bio
+    @posts = @user.posts
+    @post_new = Post.new
   end
 
   # GET /bios/1
