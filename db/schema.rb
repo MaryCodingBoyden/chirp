@@ -10,16 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
+
 ActiveRecord::Schema.define(version: 2018_09_08_181624) do
-=======
-ActiveRecord::Schema.define(version: 0) do
->>>>>>> divise work, there is an error
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "bios", force: :cascade do |t|
     t.bigint "user_id"
     t.text "bio"
@@ -64,6 +61,5 @@ ActiveRecord::Schema.define(version: 0) do
   add_foreign_key "comments", "posts"
   add_foreign_key "comments", "users"
   add_foreign_key "posts", "users"
-=======
->>>>>>> divise work, there is an error
+
 end

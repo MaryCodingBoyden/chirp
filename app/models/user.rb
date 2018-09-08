@@ -27,4 +27,5 @@ class User < ApplicationRecord
   def destroy_bio
     self.bio.destroy
   end
+
 end
