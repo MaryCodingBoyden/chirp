@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_09_08_181624) do
-=======
-ActiveRecord::Schema.define(version: 2018_09_08_180221) do
->>>>>>> f2d0f4ed0c52aad5571a5f1c6321630e576a1006
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,7 +46,6 @@ ActiveRecord::Schema.define(version: 2018_09_08_180221) do
     t.string "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-<<<<<<< HEAD
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -58,8 +53,6 @@ ActiveRecord::Schema.define(version: 2018_09_08_180221) do
     t.datetime "remember_created_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-=======
->>>>>>> f2d0f4ed0c52aad5571a5f1c6321630e576a1006
   end
 
   add_foreign_key "bios", "users"
