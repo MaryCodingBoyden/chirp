@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_for :user
   resources :bios
 
+
   resources :posts do
     member do
       get 'like'
