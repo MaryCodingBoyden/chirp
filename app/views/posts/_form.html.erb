@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :user_id %>
-    <%= form.text_field :user_id %>
+    <%= form.hidden_field current_user.id %>
   </div>
 
   <div class="field">

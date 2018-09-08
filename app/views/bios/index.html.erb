@@ -1,10 +1,20 @@
 <p id="notice"><%= notice %></p>
 
 <h1><%=@user.full_name%></h1>
+
+<p>
+<%= @bio.bio? ? @bio.bio : nil %>
+<%= link_to "#{@bio.bio? ? "Update" : "Create"} Bio", edit_bio_path(@bio) %>
+</p>
+
 <h5>Chirp Chirp!</h5>
+<%= link_to "Add a Chirp!", new_post_path %>
+<hr/>
+
+
 
 <%=@posts.each do |post| %>
-
+  <%= render "posts/post_view", post: post %>
 
 <%end%>
 
@@ -12,4 +22,4 @@
 
 <br>
 
-<%= link_to 'New Bio', new_bio_path %>
+

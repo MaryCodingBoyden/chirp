@@ -22,7 +22,7 @@
           <a href="/posts">Seed Feed</a>
         </li>
         <li>
-          <a href="#bio">Logout</a>
+          <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
         </li>
 
       </ul>
