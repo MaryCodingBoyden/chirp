@@ -1,0 +1,42 @@
+<div class="navbar-fixed" style="padding-bottom: 40px">
+  <nav class="indigo">
+    <div class="nav-wrapper">
+      <!-- Use below if we get to a logo -->
+      <% # %img.brand-logo{:src => "Pohl989_logo.png", :href => "/"} %>
+      <% # .brand-logo %>
+      <% #   %a.brand-logo{:href => "#!"} %>
+      <% #     = image_tag("sample-3.jpg") %>
+      <div class="brand-logo">
+        <% # = link_to "/" do %>
+        <!-- THIS will be a our logo <img src="<%= image_url '' %>"/> -->
+        <% # = image_tag("sample-3.jpg") %>
+      </div>
+      <a class="button-collapse" data-activates="mobile-demo" href="#">
+        <i class="material-icons">menu</i>
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li class="<%= 'active' if current_page?('#portfolio') %>">
+          <a href="#portfolio">Profile</a>
+        </li>
+        <li>
+          <a href="#skills">Seed Feed</a>
+        </li>
+        <li>
+          <a href="#bio">Logout</a>
+        </li>
+
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <a href="#portfolio">Profile</a>
+        </li>
+        <li>
+          <a href="#skills">Seed Feed</a>
+        </li>
+        <li>
+          <a href="#bio">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
