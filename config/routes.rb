@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'bios#index'
   devise_for :user
   resources :bios
+  devise_for :users 
 
 
   resources :posts do
