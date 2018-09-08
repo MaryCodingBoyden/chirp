@@ -14,7 +14,7 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
-      <% if post.user.first_name === 'Blue' %> <!-- change to current user -->
+      <% if current_user.liked? event %> <!-- change to current user -->
         <td><%= post.user %></td>
         <td><%= post.body %></td>
         <td><%= link_to 'Show', post %></td>
@@ -42,7 +42,7 @@
 <!-- Like content -->
 
 <% @posts.each do |post| %>
-<% if post.user.first_name === 'Blue' %> <!-- #FIXME change to current user -->
+  <% if current_user.liked? event %> 
   <%= link_to '', unlike_post_path(post.id), remote: true,
                         id: "like_#{post.id}",
                         class: "glyphicon glyphicon-heart" %>

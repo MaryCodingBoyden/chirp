@@ -5,7 +5,7 @@ class BiosController < ApplicationController
   # GET /bios.json
   def index
     @user = User.first
-    @bios = @user.bio
+    @bio = @user.bio
     @posts = @user.posts
     @post_new = Post.new
   end
@@ -17,7 +17,6 @@ class BiosController < ApplicationController
 
   # GET /bios/new
   def new
-    @bio = Bio.new
   end
 
   # GET /bios/1/edit
@@ -45,7 +44,7 @@ class BiosController < ApplicationController
   def update
     respond_to do |format|
       if @bio.update(bio_params)
-        format.html { redirect_to @bio, notice: 'Bio was successfully updated.' }
+        format.html { redirect_to bios_path, notice: 'Bio was successfully updated.' }
         format.json { render :show, status: :ok, location: @bio }
       else
         format.html { render :edit }
