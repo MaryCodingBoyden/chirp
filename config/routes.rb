@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
 
   root 'bios#index'
-  devise_for :users
   resources :bios
-  devise_for :users
+  devise_for :user
 
 
   resources :posts do
