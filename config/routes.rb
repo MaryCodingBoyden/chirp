@@ -1,10 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
  
-=======
-
-  
->>>>>>> posts
   root 'bios#index'
   resources :bios
   devise_for :user
