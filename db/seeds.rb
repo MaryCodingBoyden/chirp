@@ -8,12 +8,11 @@
 
 50.times do
     user = User.create(
-      name: Faker::Zelda.name, description: Faker::Lorem.sentence
+      first_name: Faker::Zelda.name, last_name: Faker::Zelda.name
     )
     5.times {
       Post.create(
-        title: Faker::Zelda.title,
-        comment: Faker::User.comment,
+        body: Faker::Lorem.sentences,
         user_id: user.id
       )
     }
