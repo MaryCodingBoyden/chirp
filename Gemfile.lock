@@ -62,6 +62,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    font-awesome-rails (4.7.0.4)
+      railties (>= 3.2, < 6.0)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
     i18n (1.1.0)
@@ -186,7 +188,11 @@ DEPENDENCIES
   awesome_print
   bootsnap (>= 1.1.0)
   byebug
+<<<<<<< HEAD
   devise
+=======
+  font-awesome-rails
+>>>>>>> halfway to font awesome
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   materialize-sass
