@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
 
   # GET /posts
   # GET /posts.json
@@ -61,6 +61,25 @@ class PostsController < ApplicationController
     end
   end
 
+  def like
+    @post.liked_by current_user
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js
+      end
+   end
+    #FIX ME not sure if js or json
+
+
+  def unlike
+    @post.unliked_by current_user
+    respond_to do |format|
+      format.html { redirect_to :back }
+      format.js
+      end
+   end
+   #FIX ME not sure if js or json
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -71,4 +90,6 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:user_id, :body)
     end
+
+    
 end
