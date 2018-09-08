@@ -14,12 +14,14 @@
   <tbody>
     <% @posts.each do |post| %>
       <tr>
+      <% if post.user.first_name === 'Blue' %> <!-- change to current user -->
         <td><%= post.user %></td>
         <td><%= post.body %></td>
         <td><%= link_to 'Show', post %></td>
         <td><%= link_to 'Edit', edit_post_path(post) %></td>
         <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+    <% end %>
     <% end %>
   </tbody>
 </table>
@@ -28,11 +30,19 @@
 
 <%= link_to 'New Post', new_post_path %>
 
+<ul>
+<% @posts.each do |post| %>
+  <li>
+    <%= post.body %>
+  </li>
+<% end %>
+</ul>
 
 
-<!-- TESTING LIKE BUTTON -->
+<!-- Like content -->
 
-<% if current_user.liked? post %>
+<% @posts.each do |post| %>
+<% if post.user.first_name === 'Blue' %> <!-- #FIXME change to current user -->
   <%= link_to '', unlike_post_path(post.id), remote: true,
                         id: "like_#{post.id}",
                         class: "glyphicon glyphicon-heart" %>
@@ -40,4 +50,5 @@
   <%= link_to '', like_post_path(post.id), remote: true,
                         id: "like_#{post.id}",
                         class: "glyphicon glyphicon-heart-empty" %>
-<% end %>
+<% end %> 
+<%end%>
